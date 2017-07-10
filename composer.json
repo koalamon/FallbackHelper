@@ -1,0 +1,9 @@
+{
+  "name": "koalamon/fallbackhelper",
+  "description": "PHP lib for handling a fallback server",
+  "autoload": {
+    "psr-4": {
+      "Koalamon\\FallbackHelper\\": "src/"
+    }
+  } 
+}
