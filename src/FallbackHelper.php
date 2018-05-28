@@ -22,6 +22,11 @@ class FallbackHelper
         return $this->isFallbackServer;
     }
 
+    public function isFallbackOutput($output)
+    {
+        return strpos(implode(' # ', $output), self::FALLBACK_STRING) !== false;
+    }
+
     /**
      * This function exits the program and returns the needed fallback string.
      *
@@ -30,7 +35,7 @@ class FallbackHelper
     public function doFallback($message = null)
     {
         if ($message) {
-            echo "\nMessage: " . $message ;
+            echo "\nMessage: " . $message;
         }
 
         die(self::FALLBACK_STRING);
